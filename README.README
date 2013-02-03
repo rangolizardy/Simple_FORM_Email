@@ -1,0 +1,34 @@
+Notkun:
+Þetta er bara pípa úr $_POST og $_GET yfir í tölvupóst.
+
+S.s. virkar bæði með get og post formum,
+
+Uppsetning: Þú þarft að stilla skriptuna inní post.php.
+
+"
+$Email_To = "jonstori@example.com";
+
+//Pantanir koma frá þessu emaili
+$Email_From = "webmaster@example.com";
+//Titill á alla tölvupósta,
+$Email_Subject = "Þú varst að fá pöntun";
+
+//Hvert notandin er sendur eftir að hann sendir inn formið
+$Redir_To = "http://logreglan.is/";
+
+"
+s.s. Eins og þetta, Bara með alvöru gildum.
+
+
+Template.php: Þetta er template af tölvupóstinum sem er sendur, Inn í þetta seturðu hluti úr forminu. Og getur stillt eftir þörfum.
+
+Til dæmis ef þú ert með þetta í forminu, 
+"
+Name<input name="Name" />
+
+"
+og villt sýna það í tölvupóstinum sem fer út. þá gerirðu svona í template.
+<?php echo $form['Name'] ?>
+
+Getur notað það sem er nú þegar í demo.html og template.php og fikrað þig áfram,
+
